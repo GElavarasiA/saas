@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Sub Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SaaS Subscription Manager</h1>
+        <div class="form-group">
+            <input type="text" id="serviceName" placeholder="Service Name (e.g. Netflix)">
+            <input type="number" id="cost" placeholder="Monthly Cost ($)">
+            <button onclick="addSubscription()">Add Sub</button>
+        </div>
+        <ul id="subList"></ul>
+        <div class="total">Total Monthly: $<span id="totalCost">0</span></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
