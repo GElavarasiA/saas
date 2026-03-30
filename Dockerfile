@@ -1,10 +1,7 @@
-# Use the lightweight Nginx Alpine image
-FROM nginx:alpine
+FROM jenkins/jenkins:lts-jdk17
 
-# Copy our frontend files into the Nginx html directory
-COPY index.html /usr/share/nginx/html/
-COPY style.css /usr/share/nginx/html/
-COPY script.js /usr/share/nginx/html/
+USER root
 
-# Nginx serves on port 80 by default
-EXPOSE 80
+RUN apt-get update && apt-get install -y docker.io
+
+USER jenkins
