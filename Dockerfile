@@ -1,7 +1,3 @@
-FROM jenkins/jenkins:lts-jdk17
+FROM nginx:alpine
 
-USER root
-
-RUN apt-get update && apt-get install -y docker.io
-
-USER jenkins
+COPY . /usr/share/nginx/html
